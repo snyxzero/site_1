@@ -1,282 +1,296 @@
 body {
-    margin: 0;
-    background-color: #ffffff;
-    font-family: 'Heebo', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Heebo", sans-serif;
 }
 
 .header {
-    margin: auto;
-    padding-top: 27px;
-    max-width: 1032px;
-    height: 43px;
+  margin: auto;
+  padding-top: 27px;
+  max-width: 1032px;
+  height: 43px;
 
-    display: flex;
-    justify-content: end;
-    
-
+  display: flex;
+  justify-content: end;
 }
 
+/* Отступы лучше сделать с помощью селектора :not(:last-child) */
+/* 
+    .header__link:not(:last-child) { margin-right: 33px }
+    тогда у всех элементов кроме последнего будет отступ
+*/
 .header__link {
-    margin-left: 33px;
+  margin-left: 33px;
 
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 29px;
-    text-align: right;
-    color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: right;
+  color: black;
 }
+
+/* 
+    Много повторяется max-width: 856px; margin: auto;
+    можно вынести в отдельный класс .container и просто навешивать его на секции
+
+    .container { max-width: 856px; margin: 0 auto; }
+
+    Отступы от элементов лучше делать с помощью margin, padding это скорее то что относится к элементу и влияет на его размер(высоту, ширину)
+    при box-sizing: border-box из-за этого можно накосячить в верстке 
+    padding-top: 140px; -> margin-top: 140px
+*/
 
 .greeting {
-    margin: auto;
-    padding-top: 140px;
-    max-width: 856px;
+  margin: auto;
+  padding-top: 140px;
+  max-width: 856px;
 
-    display: flex; 
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .greeting-text {
-    width: 497px;
+  width: 497px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
+/* 
+    __text-1 - __title
+    __text-2 - __subtitle или __notice
+*/
 
 .greeting-text__text-1 {
-    margin: 0;
+  margin: 0;
 
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 60px;
-    color: #21243D;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+  color: #21243d;
 }
 
-.greeting-text__text-2{ 
-    margin: 0;
-    padding-top: 40px;
+.greeting-text__text-2 {
+  margin: 0;
+  padding-top: 40px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #21243D;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
 }
 
 .greeting__john-foto {
-width: 248px;
-height: 256px;
+  width: 248px;
+  height: 256px;
 }
 
 .button {
-    margin: auto;
-    max-width: 856px;
-    padding-top: 11px;
-    padding-bottom: 71px;
+  margin: auto;
+  max-width: 856px;
+  padding-top: 11px;
+  padding-bottom: 71px;
 }
 
 .button__item {
-    width: 208px;
-    height: 47px;
+  width: 208px;
+  height: 47px;
 
-    background: #FF6464;
-    border-radius: 2px;
-    border-style: hidden;
-    cursor: pointer;
+  background: #ff6464;
+  border-radius: 2px;
+  border-style: hidden;
+  cursor: pointer;
 
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 29px;
-    color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
 }
 
 .background-resent-posts {
-    padding-top: 15px;
-    padding-bottom: 32px;
+  padding-top: 15px;
+  padding-bottom: 32px;
 
-    background-color: #EDF7FA;
+  background-color: #edf7fa;
 }
 
 .resent-heading {
-    margin: auto;
-    max-width: 856px;
+  margin: auto;
+  max-width: 856px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .resent-heading__text {
-    margin: 0;
+  margin: 0;
 
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 60px;
-    color: #21243D;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  color: #21243d;
 }
 
 .resent-heading__link {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: right;
-    color: #00A8CC;
-    text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #00a8cc;
+  text-decoration: none;
 }
 
 .resent-posts {
-    margin: auto;
-    max-width: 856px;
+  margin: auto;
+  max-width: 856px;
 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .resent-posts__post {
-    width: calc(50% - 10px);
+  width: calc(50% - 10px);
 
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .resent-posts__post__text-1 {
-    padding-left: 23px;
-    padding-right: 23px;
+  padding-left: 23px;
+  padding-right: 23px;
 
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 38px;
-    color: #21243D;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 38px;
+  color: #21243d;
 }
 
 .resent-posts__post__text-2 {
-    padding-left: 23px;
-    padding-right: 23px;
+  padding-left: 23px;
+  padding-right: 23px;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    color: #21243D;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243d;
 }
 
 .resent-posts__post__text-3 {
-    padding-left: 23px;
-    padding-right: 23px;
-    
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #21243D;
+  padding-left: 23px;
+  padding-right: 23px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
 }
 
 .works-heading {
-    margin: auto;
-    max-width: 856px;
+  margin: auto;
+  max-width: 856px;
 }
 
 .works-heading__text {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 60px;
-    color: #21243D;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  color: #21243d;
 }
 
-
-
 .hr {
-    margin: auto;
-    max-width: 856px;
-    margin-top: 31px;
-    margin-bottom: 31px;
-    border: 1px solid #E0E0E0;
+  margin: auto;
+  max-width: 856px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  border: 1px solid #e0e0e0;
 }
 
 .work {
-    display: flex;
-    margin: auto;
-    max-width: 856px;
+  display: flex;
+  margin: auto;
+  max-width: 856px;
 }
 
 .work__img {
-    width: 246px;
-    height: 180px;
+  width: 246px;
+  height: 180px;
 }
 
 .work__description {
-    padding-left: 18px;
+  padding-left: 18px;
 }
 
 .work__description__header {
-    margin: 0;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 44px;
-    color: #21243D;
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: #21243d;
 }
 
 .work__description__tags {
-    padding-top: 12px;
-    padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 15px;
 
-    display: flex;
-    align-items: center
+  display: flex;
+  align-items: center;
 }
 
 .tags__year {
-    margin: 0;
-    width: 62px;
-    height: 25px;
+  margin: 0;
+  width: 62px;
+  height: 25px;
 
-    font-weight: 900;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
 
-    background: #142850;
-    border-radius: 16px;
+  background: #142850;
+  border-radius: 16px;
 }
 
 .tags__theme {
-    margin: 0;
-    padding-left: 26px;
+  margin: 0;
+  padding-left: 26px;
 
-    font-weight: 400;
-    font-size: 20px;
-    color: #8695A4;
-
+  font-weight: 400;
+  font-size: 20px;
+  color: #8695a4;
 }
 
 .work__description__text {
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #21243D;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
 }
 
 .blank {
-    height: 52px;
+  height: 52px;
 }
 
 .footer {
-    margin: auto;
-    padding-top: 51px;
-    max-width: 232px;
-    height: 131px;
+  margin: auto;
+  padding-top: 51px;
+  max-width: 232px;
+  height: 131px;
 }
 
 .footer__images {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .footer__copyright {
-    margin: 0;
-    padding-top: 26px;
+  margin: 0;
+  padding-top: 26px;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #21243D;
-    text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #21243d;
+  text-align: center;
 }
