@@ -19,6 +19,14 @@
       <a class="header__link" href="">Contacts</a>
     </header>
 
+    <!-- 
+      Для семантики неплохо было бы обернуть всё в <main>...</main> но это не сильно важно пока
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+
+      Так же отдельные блоки-секции лучше писать через <section>...</section>
+      http://htmlbook.ru/html/section
+     -->
+
     <div class="greeting">
       <div class="greeting-text">
         <p class="greeting-text__text-1">
@@ -34,10 +42,20 @@
       <img class="greeting__john-foto" src="img/John.png" alt="John" />
     </div>
 
+    <!-- Класс .button думаю лучше держать на самой кнопке, а не на секции, она скорее .action .action__button -->
     <div class="button">
       <button class="button__item">Download resume</button>
     </div>
 
+    <!-- background-resent-posts -> resent-posts__container -->
+    <!-- 
+      &nbsp;&nbsp;&nbsp;&nbsp;&#124;&nbsp;&nbsp;&nbsp;&nbsp; лучше заменить на margin-left/margin-right
+      <span>12 Feb 2020</span>
+      <span>Design, Pattern</span>
+     -->
+     <!-- 
+      __text-1, __text-2, __text-3 лучше на что-то осмысленное __title, __subtitle, __content
+      -->
     <div class="background-resent-posts">
       <div class="resent-heading">
         <p class="resent-heading__text">Recent posts</p>
