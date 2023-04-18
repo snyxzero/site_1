@@ -6,7 +6,7 @@ body {
 
 .header {
   margin: auto;
-  padding-top: 27px;
+  margin-top: 27px;
   max-width: 1032px;
   height: 43px;
 
@@ -14,14 +14,13 @@ body {
   justify-content: end;
 }
 
-/* Отступы лучше сделать с помощью селектора :not(:last-child) */
+/* ++ Отступы лучше сделать с помощью селектора :not(:last-child) */
 /* 
     .header__link:not(:last-child) { margin-right: 33px }
-    тогда у всех элементов кроме последнего будет отступ
+    тогда у всех элементов кроме последнего будет отступ ++
 */
+.header__link:not(:last-child) { margin-right: 33px }
 .header__link {
-  margin-left: 33px;
-
   text-decoration: none;
   font-weight: 500;
   font-size: 20px;
@@ -31,20 +30,23 @@ body {
 }
 
 /* 
-    Много повторяется max-width: 856px; margin: auto;
-    можно вынести в отдельный класс .container и просто навешивать его на секции
+    ++ Много повторяется max-width: 856px; margin: auto;
+    можно вынести в отдельный класс .container и просто навешивать его на секции ++
 
-    .container { max-width: 856px; margin: 0 auto; }
+    ++ .container { max-width: 856px; margin: 0 auto; } ++
 
-    Отступы от элементов лучше делать с помощью margin, padding это скорее то что относится к элементу и влияет на его размер(высоту, ширину)
+    ++ Отступы от элементов лучше делать с помощью margin, padding это скорее то что относится к элементу и влияет на его размер(высоту, ширину)
     при box-sizing: border-box из-за этого можно накосячить в верстке 
-    padding-top: 140px; -> margin-top: 140px
+    padding-top: 140px; -> margin-top: 140px ++ (есть момент "?")
 */
 
-.greeting {
-  margin: auto;
-  padding-top: 140px;
+.container {
   max-width: 856px;
+  margin: auto;
+}
+
+.greeting {
+  margin-top: 140px;
 
   display: flex;
   justify-content: space-between;
@@ -58,11 +60,11 @@ body {
 }
 
 /* 
-    __text-1 - __title
-    __text-2 - __subtitle или __notice
+    ++ __text-1 - __title
+    __text-2 - __subtitle или __notice ++
 */
 
-.greeting-text__text-1 {
+.greeting-text__title {
   margin: 0;
 
   font-weight: 700;
@@ -71,9 +73,9 @@ body {
   color: #21243d;
 }
 
-.greeting-text__text-2 {
+.greeting-text__notice {
   margin: 0;
-  padding-top: 40px;
+  margin-top: 40px;
 
   font-weight: 400;
   font-size: 16px;
@@ -86,14 +88,12 @@ body {
   height: 256px;
 }
 
-.button {
-  margin: auto;
-  max-width: 856px;
-  padding-top: 11px;
-  padding-bottom: 71px;
+.action {
+  margin-top: 11px;
+  margin-bottom: 71px;
 }
 
-.button__item {
+.action__button {
   width: 208px;
   height: 47px;
 
@@ -108,7 +108,8 @@ body {
   color: #ffffff;
 }
 
-.background-resent-posts {
+/* ????????????????????????? */
+.resent-posts__container {
   padding-top: 15px;
   padding-bottom: 32px;
 
@@ -116,9 +117,7 @@ body {
 }
 
 .resent-heading {
-  margin: auto;
-  max-width: 856px;
-
+  /* margin-top: 15px;     */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,8 +142,7 @@ body {
 }
 
 .resent-posts {
-  margin: auto;
-  max-width: 856px;
+  /* margin-bottom: 32px;   */
 
   display: flex;
   justify-content: space-between;
@@ -156,7 +154,7 @@ body {
   background-color: #ffffff;
 }
 
-.resent-posts__post__text-1 {
+.resent-posts__post__title {
   padding-left: 23px;
   padding-right: 23px;
 
@@ -166,7 +164,7 @@ body {
   color: #21243d;
 }
 
-.resent-posts__post__text-2 {
+.resent-posts__post__subtitle {
   padding-left: 23px;
   padding-right: 23px;
 
@@ -176,7 +174,12 @@ body {
   color: #21243d;
 }
 
-.resent-posts__post__text-3 {
+.subtitle__container {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.resent-posts__post__content {
   padding-left: 23px;
   padding-right: 23px;
 
@@ -187,8 +190,7 @@ body {
 }
 
 .works-heading {
-  margin: auto;
-  max-width: 856px;
+
 }
 
 .works-heading__text {
@@ -199,8 +201,6 @@ body {
 }
 
 .hr {
-  margin: auto;
-  max-width: 856px;
   margin-top: 31px;
   margin-bottom: 31px;
   border: 1px solid #e0e0e0;
@@ -208,8 +208,6 @@ body {
 
 .work {
   display: flex;
-  margin: auto;
-  max-width: 856px;
 }
 
 .work__img {
@@ -230,8 +228,8 @@ body {
 }
 
 .work__description__tags {
-  padding-top: 12px;
-  padding-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 15px;
 
   display: flex;
   align-items: center;
@@ -274,7 +272,7 @@ body {
 
 .footer {
   margin: auto;
-  padding-top: 51px;
+  margin-top: 51px;
   max-width: 232px;
   height: 131px;
 }
@@ -286,7 +284,7 @@ body {
 
 .footer__copyright {
   margin: 0;
-  padding-top: 26px;
+  margin-top: 26px;
 
   font-weight: 400;
   font-size: 14px;
