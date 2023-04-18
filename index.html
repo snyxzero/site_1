@@ -23,81 +23,79 @@
       Для семантики неплохо было бы обернуть всё в <main>...</main> но это не сильно важно пока
       https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
 
-      Так же отдельные блоки-секции лучше писать через <section>...</section>
-      http://htmlbook.ru/html/section
+      ++ Так же отдельные блоки-секции лучше писать через <section>...</section>
+      http://htmlbook.ru/html/section  ++
      -->
 
-    <div class="greeting">
+    <section class="greeting container">
       <div class="greeting-text">
-        <p class="greeting-text__text-1">
+        <p class="greeting-text__title">
           Hi, I am John,<br />
           Creative Technologist
         </p>
-        <p class="greeting-text__text-2">
+        <p class="greeting-text__notice">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </p>
       </div>
       <img class="greeting__john-foto" src="img/John.png" alt="John" />
-    </div>
+    </section>
 
-    <!-- Класс .button думаю лучше держать на самой кнопке, а не на секции, она скорее .action .action__button -->
-    <div class="button">
-      <button class="button__item">Download resume</button>
-    </div>
+    <!-- ++ Класс .button думаю лучше держать на самой кнопке, а не на секции, она скорее .action .action__button ++ --> 
+    <section class="action  container">
+      <button class="action__button">Download resume</button>
+    </section>
 
-    <!-- background-resent-posts -> resent-posts__container -->
-    <!-- 
+    <!-- ++ background-resent-posts -> resent-posts__container ++ -->
+    <!-- ++
       &nbsp;&nbsp;&nbsp;&nbsp;&#124;&nbsp;&nbsp;&nbsp;&nbsp; лучше заменить на margin-left/margin-right
       <span>12 Feb 2020</span>
-      <span>Design, Pattern</span>
+      <span>Design, Pattern</span> ++
      -->
      <!-- 
-      __text-1, __text-2, __text-3 лучше на что-то осмысленное __title, __subtitle, __content
+      ++ __text-1, __text-2, __text-3 лучше на что-то осмысленное __title, __subtitle, __content ++
       -->
-    <div class="background-resent-posts">
-      <div class="resent-heading">
+    <section class="resent-posts__container">
+      <div class="resent-heading  container">
         <p class="resent-heading__text">Recent posts</p>
         <a class="resent-heading__link" href="">View all</a>
       </div>
-      <div class="resent-posts">
+      <div class="resent-posts  container">
         <div class="resent-posts__post">
-          <p class="resent-posts__post__text-1">
+          <p class="resent-posts__post__title">
             Making a design system from scratch
           </p>
-          <p class="resent-posts__post__text-2">
-            12 Feb 2020 &nbsp;&nbsp;&nbsp;&nbsp;&#124;&nbsp;&nbsp;&nbsp;&nbsp;
-            Design, Pattern
+          <p class="resent-posts__post__subtitle">
+            12 Feb 2020<span class="subtitle__container">&#124</span>Design, Pattern
           </p>
-          <p class="resent-posts__post__text-3">
+          <p class="resent-posts__post__content">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
         </div>
         <div class="resent-posts__post">
-          <p class="resent-posts__post__text-1">
+          <p class="resent-posts__post__title">
             Creating pixel perfect icons in Figma
           </p>
-          <p class="resent-posts__post__text-2">
-            12 Feb 2020 &nbsp;&nbsp;&nbsp;&nbsp;&#124;&nbsp;&nbsp;&nbsp;&nbsp;
-            Figma, Icon Design
+          <p class="resent-posts__post__subtitle">
+            12 Feb 2020<span class="subtitle__container">&#124</span>Figma, Icon Design
           </p>
-          <p class="resent-posts__post__text-3">
+          <p class="resent-posts__post__content">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="works-heading">
+    <section class="works-heading container">
       <p class="works-heading__text">Featured works</p>
-    </div>
+    </section>
 
-    <div class="work">
+    <section class="work container">
       <img
         class="work__img"
         src="img/Designing Dashboards.png"
@@ -115,11 +113,11 @@
           veniam consequat sunt nostrud amet.
         </p>
       </div>
-    </div>
+    </section>
 
-    <hr class="hr" />
+    <hr class="hr  container" />
 
-    <div class="work">
+    <section class="work container">
       <img
         class="work__img"
         src="img/Vibrant Portraits of 2020.png"
@@ -137,11 +135,11 @@
           veniam consequat sunt nostrud amet.
         </p>
       </div>
-    </div>
+    </section>
 
-    <hr class="hr" />
+    <hr class="hr container" />
 
-    <div class="work">
+    <section class="work container">
       <img
         class="work__img"
         src="img/36 Days of Malayalam type.png"
@@ -159,9 +157,9 @@
           veniam consequat sunt nostrud amet.
         </p>
       </div>
-    </div>
+    </section>
 
-    <hr class="hr" />
+    <hr class="hr container" />
 
     <div class="blank"></div>
 
